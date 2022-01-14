@@ -74,7 +74,7 @@ class WelcomePage extends StatelessWidget {
                 child: RaisedButton(
                   //making the routing and routing the button to register screen
                   onPressed: (){
-
+                    Navigator.pushReplacementNamed(context, '/register');
                   },
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: HexColor("#14133E"),
