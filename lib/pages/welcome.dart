@@ -72,7 +72,10 @@ class WelcomePage extends StatelessWidget {
                 minWidth: 300,
                 height: 60,
                 child: RaisedButton(
-                  onPressed: (){},
+                  //making the routing and routing the button to register screen
+                  onPressed: (){
+
+                  },
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                   color: HexColor("#14133E"),
                   child: Row(
@@ -98,7 +101,12 @@ class WelcomePage extends StatelessWidget {
             const SizedBox(height: 10,),
 
             //code for clickable text
+          
             InkWell(
+              //routing it to login page
+              onTap: (){
+                Navigator.pushReplacementNamed(context, '/login');
+              },
               child: Text('Already have an account ? Sign In',
                style: GoogleFonts.poppins(
                  textStyle: const TextStyle(
