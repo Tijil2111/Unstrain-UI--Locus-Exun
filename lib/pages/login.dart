@@ -51,6 +51,30 @@ class LoginPage extends StatelessWidget {
               decoration: textInputDecoration.copyWith(hintText: "Password")
               ),
             ),
+            const SizedBox(height: 40,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ButtonTheme(
+                height: 45,
+                minWidth: 135,
+                child: RaisedButton(
+                  //making the routing and routing the button to home screen
+                  onPressed: (){
+
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    side: const BorderSide(color: Colors.black, width: 2)
+                    ),
+                  color: Colors.white,
+                  elevation: 0,
+                  child: Text(
+                    'Submit',
+                    style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w600)
+                  )
+                ),
+              ),
+            ),
           ],
         ),
       ),
