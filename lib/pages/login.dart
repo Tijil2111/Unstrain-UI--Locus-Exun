@@ -60,7 +60,7 @@ class LoginPage extends StatelessWidget {
                 child: RaisedButton(
                   //making the routing and routing the button to home screen
                   onPressed: (){
-
+                    Navigator.pushReplacementNamed(context, '/home');
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -71,7 +71,7 @@ class LoginPage extends StatelessWidget {
                   child: Text(
                     'Submit',
                     style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w600)
-                  )
+                  ),
                 ),
               ),
             ),

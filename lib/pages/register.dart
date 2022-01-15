@@ -67,7 +67,7 @@ class RegisterPage extends StatelessWidget {
                 child: RaisedButton(
                   //making the routing and routing the button to home screen
                   onPressed: (){
-
+                    Navigator.pushReplacementNamed(context, '/home');
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
