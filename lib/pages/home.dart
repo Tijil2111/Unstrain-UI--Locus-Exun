@@ -12,15 +12,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       //defining the app bar which has the mood asker
         appBar: AppBar(
+          elevation: 0,
         backgroundColor: HexColor("#14133E"),
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(40),
-                bottomRight: Radius.circular(40),
-                topLeft: Radius.circular(0),
-                topRight: Radius.circular(0))),
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(230),
+          preferredSize: const Size.fromHeight(40),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -34,29 +29,6 @@ class HomePage extends StatelessWidget {
                     )
                   ),
                 ),
-                const SizedBox(height:35),
-                Text(
-                  'How are you doing today?',
-                  style: GoogleFonts.poppins(
-                    textStyle: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white
-                    )
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(40),
-                  bottomRight: Radius.circular(40),
-                  topLeft: Radius.circular(0),
-                  topRight: Radius.circular(0)),
-                  child: Image.asset('assets/emoji.png'),
-                  ),
-                ),
-                const SizedBox(height:15),
               ],
             ),
           ),
@@ -81,7 +53,41 @@ class HomePage extends StatelessWidget {
     child: Center(
       child: Column(
         children: [
-          const SizedBox(height: 20),
+          // make a cool look with the emoji's scrolling down
+          ClipRRect(
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(40),
+                bottomRight: Radius.circular(40),
+                topLeft: Radius.circular(0),
+                topRight: Radius.circular(0)),
+            child: Container(
+              color: HexColor("#14133E"),
+              child: Column(
+                children: [
+            const SizedBox(height:35),
+                  Text(
+                    'How are you doing today?',
+                    style: GoogleFonts.poppins(
+                      textStyle: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white
+                      )
+                    ),
+                  ),
+                  ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(40),
+                  bottomRight: Radius.circular(40),
+                  topLeft: Radius.circular(0),
+                  topRight: Radius.circular(0)),
+                  child: Image.asset('assets/emoji.png'),
+                  ),
+                  const SizedBox(height:15),
+                ],
+              )
+            ),
+          ),
            Text(
            'Stress Level',
              style: GoogleFonts.poppins(
