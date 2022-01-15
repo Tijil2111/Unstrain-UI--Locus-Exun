@@ -67,6 +67,7 @@ flutter:
     - assets/pic1.png
     - assets/emoji.png
     - assets/chart.png
+    - assets/profile.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
