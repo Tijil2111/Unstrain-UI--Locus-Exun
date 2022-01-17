@@ -26,9 +26,11 @@ class _MainPageState extends State<MainPage> {
         backgroundColor: Colors.white,
         body: _pageOptions[selectedPage],
         bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home, size: 30),label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.mail, size: 30),label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.message_outlined, size: 30),label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.account_circle, size: 30),label: ''),
           ],
           selectedItemColor: Colors.black,
